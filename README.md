@@ -1,6 +1,6 @@
 # Example: React + Router + Redux + Immutable.js
 
-This is a barebones working [React](https://facebook.github.io/react/) application that demonstrates combining [React Router](https://github.com/reactjs/react-router) and [Redux](http://redux.js.org/) (using an [Immutable.js](https://facebook.github.io/immutable-js/) store). We use [Babel](https://babeljs.io/) to transpile ES6 and [Webpack](https://webpack.github.io/) to trigger Babel and pack the results.
+This is a barebones working [React](https://facebook.github.io/react/) application that demonstrates combining [React Router](https://github.com/reactjs/react-router) and [Redux](http://redux.js.org/) using an [Immutable.js](https://facebook.github.io/immutable-js/) store. We use [Babel](https://babeljs.io/) to transpile ES6 to ES5 that can be run in the browser and [Webpack](https://webpack.github.io/) to trigger Babel and pack the results.
 
 ## Motivation:
 
@@ -10,13 +10,27 @@ This is a barebones working [React](https://facebook.github.io/react/) applicati
 
 ## Overview
 
-Conceptually, I started with a plain React application, then added React Router. I then extended this with a Redux store for managing state. I use the [react-router-redux](https://github.com/reactjs/react-router-redux) package to help manage the interplay between these two packages.
+I started with a plain React application, then added React Router. I extended this with a Redux store for managing state. I used the [react-router-redux](https://github.com/reactjs/react-router-redux) package to help manage the interplay between these two packages.
 
-If you want your Redux store itself to be immutable, then you to modify things a little bit from the default Redux setup. The [redux-immutable](https://github.com/gajus/redux-immutable) package gets us most of the distance out-of-the-box, but there's [some more customization you to need to do](https://github.com/gajus/redux-immutable#using-with-react-router-redux) when combining Redux, Immutable.js, AND react router.
+If you want your Redux store itself to be immutable, then you to modify things a little bit from the default Redux setup. The [redux-immutable](https://github.com/gajus/redux-immutable) package gets us most of the distance out-of-the-box, but there's [some more customization you to need to do](https://github.com/gajus/redux-immutable#using-with-react-router-redux) when combining Redux, Immutable.js, AND React Router.
 
-My goal was to provide in a **working example** of combining all these packages and snippets together.
+My goal was to provide a **working example** of combining all these packages and snippets together.
 
-**Note**: I'm using `hashHistory` intentionally since in my use case we are supporting older version of Internet Explorer and don't want route changes to not cause a reload when `browserHistory` is not supported. See [more info](https://github.com/reactjs/react-router/blob/master/docs/guides/Histories.md#hashhistory).
+**Note**: I'm using `hashHistory` intentionally since for my use case we are supporting older versions of Internet Explorer and don't want route changes to cause a reload when `browserHistory` is not supported. See [more info](https://github.com/reactjs/react-router/blob/master/docs/guides/Histories.md#hashhistory).
+
+## Getting started
+
+Install required dependencies with
+
+    npm install
+
+You can then run the webpack development server on http://localhost:3000/ with
+
+    npm start
+
+You also can build the webpack results and save them to the `dist/` folder with
+
+    npm build
 
 
 ## Resources

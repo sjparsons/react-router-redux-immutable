@@ -32,7 +32,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-          title: "my title"
+          title: "Example: React Router Redux Immutable"
         })
     ]
 };
